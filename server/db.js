@@ -20,7 +20,7 @@ const Topic = mongoose.model('Topic', topicSchema);
 
 //add documents to collection
 const saveTopic = (topic) => {
-  return Topic.find( { ident: topic.ident} )
+  return Topic.find( { ident: topic.ident } )
     .then((data) => {
       if (!data.length) {
         const newTopic = new Topic ({
@@ -41,15 +41,15 @@ const saveTopic = (topic) => {
     });
 };
 // saveTopic({
-//   ident: 21855450,
-//   title: 'MongoDB',
-//   blurb: ' <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.2&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.4&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.6&quot;. <span class="searchmatch">mongodb</span>.com...',
-//   category: 'MongoDB'
+//   ident: 19006979,
+//   title: 'Macintosh',
+//   blurb: 'interface, built-in screen, and mouse. <span class="searchmatch">Apple</span> sold the Macintosh alongside its popular <span class="searchmatch">Apple</span> II, <span class="searchmatch">Apple</span> III, and <span class="searchmatch">Apple</span> Lisa families of computers until the...',
+//   category: 'apple'
 // } );
 
-//get all topics
-const getTopics = () => {
-  return Topic.find({});
+//get topics from given category
+const getTopics = (cat) => {
+  return Topic.find({category: cat});
 };
 
 module.exports.saveTopic = saveTopic;

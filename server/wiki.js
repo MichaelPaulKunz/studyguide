@@ -43,9 +43,9 @@ const getWikiSummaries = (topic) => {
     });
 };
 
-// getWikiSummaries('apple')
-//   .then(response => {
-//     console.log(response);
-//   });
+getWikiSummaries('apple')
+  .then(response => {
+    console.log(response);
+  });
 
 module.exports.getWikiSummaries = getWikiSummaries;
