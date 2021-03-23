@@ -34,7 +34,7 @@ const getWikiSummaries = (topic) => {
       const titles = [];
       response.query.search.forEach(entry => {
         //console.log(entry.title);
-        titles.push({id: entry.pageid, title: entry.title, blurb: `${entry.snippet}...`});
+        titles.push({ident: entry.pageid, title: entry.title, blurb: `${entry.snippet}...`, category: topic});
       });
       return (titles);
     })
@@ -42,8 +42,10 @@ const getWikiSummaries = (topic) => {
       console.log(error);
     });
 };
-// getWikiSummaries('http')
-//   .then(response => {
-//     console.log(response);
-//   });
+
+getWikiSummaries('apple')
+  .then(response => {
+    console.log(response);
+  });
+
 module.exports.getWikiSummaries = getWikiSummaries;
