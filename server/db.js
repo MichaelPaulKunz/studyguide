@@ -40,12 +40,12 @@ const saveTopic = (topic) => {
       }
     });
 };
-saveTopic({
-  ident: 21855450,
-  title: 'MongoDB',
-  blurb: ' <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.2&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.4&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.6&quot;. <span class="searchmatch">mongodb</span>.com...',
-  category: 'MongoDB'
-} );
+// saveTopic({
+//   ident: 21855450,
+//   title: 'MongoDB',
+//   blurb: ' <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.2&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.4&quot;. <span class="searchmatch">mongodb</span>.com. &quot;Release Notes for <span class="searchmatch">MongoDB</span> 2.6&quot;. <span class="searchmatch">mongodb</span>.com...',
+//   category: 'MongoDB'
+// } );
 
 //get all topics
 const getTopics = () => {
