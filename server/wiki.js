@@ -1,14 +1,41 @@
-let searchTerms;
-const endpoint = 'https://www.mediawiki.org/w/apleti.php';
+/*
+    search.js
+
+    MediaWiki API Demos
+    Demo of `Search` module: Search for a text or title
+
+    MIT License
+*/
+const fetch = require('node-fetch');
+let url = 'https://en.wikipedia.org/w/api.php';
+
 const params = {
   action: 'query',
   list: 'search',
-  search: 'Nelson Mandella',
-  format: 'json'
+  srsearch: 'banana',
+  format: 'json',
 };
-let url = endpoint + '?origin=*';
-Object.keys(params).forEach((key) => {
+
+url = url + '?origin=*';
+Object.keys(params).forEach(function (key) {
   url += '&' + key + '=' + params[key];
 });
 
-console.log(url);
+fetch(url)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (response) {
+    response.query.search.forEach(entry => {
+      console.log('-----------');
+      console.log('-----------');
+      console.log('-----------');
+      console.log(entry);
+      console.log('-----------');
+      console.log('-----------');
+      console.log('-----------');
+    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });

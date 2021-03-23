@@ -23,3 +23,16 @@ const Comp = props =>
 
 ReactDOM.render(<Comp />, document.getElementById('app'));
 */
+
+
+
+/**
+ *    npx create-react-app mvp
+ *
+ *    npx: installed 67 in 7.095s
+      The directory mvp contains files that could conflict:
+
+      package.json
+
+      Either try using a new directory name, or remove the files listed above.
+ */
