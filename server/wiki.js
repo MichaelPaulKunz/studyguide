@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 /*
     search.js
 
@@ -6,8 +7,9 @@
 
     MIT License
 */
-const fetch = require('node-fetch');
 
+//This function should return an array of id numbers, titles, and blurbs
+//for various wikipedia articles associated with the given topic
 const getWikiSummaries = (topic) => {
 
   let url = 'https://en.wikipedia.org/w/api.php';
@@ -44,3 +46,4 @@ const getWikiSummaries = (topic) => {
 //   .then(response => {
 //     console.log(response);
 //   });
+module.exports.getWikiSummaries = getWikiSummaries;
