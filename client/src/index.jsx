@@ -22,8 +22,8 @@ const Comp = props =>
 
 
 ReactDOM.render(<Comp />, document.getElementById('app'));
-*/
 
+*/
 
 
 /**

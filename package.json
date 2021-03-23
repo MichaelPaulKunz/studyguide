@@ -12,6 +12,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "express": "^4.17.1",
     "lodash-loader": "^2.1.4",
+    "mongoose": "^5.12.2",
     "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
