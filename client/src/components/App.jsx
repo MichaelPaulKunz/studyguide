@@ -10,24 +10,25 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      topics: [],
+      topics: [5, 4, 3, 2, 1],
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.addCat = this.addCat.bind(this);
-    this.showCats = this.showCats.bind(this);
+    //this.showCats = this.showCats.bind(this);
   }
 
-  showCats() {
-    axios.get('/api/wiki')
-      .then((response)=> {
-        console.log('hello from showCats');
-        console.log(response.data);
-      });
-  }
+  // showCats() {
+  //   axios.get('/api/wiki')
+  //     .then((response)=> {
+  //       console.log('hello from showCats');
+  //       console.log(response.data);
+  //       this.setState({topics: [5, 4, 3, 2]});
+  //     });
+  // }
 
-  componentDidMount() {
-    this.showCats();
-  }
+  // componentDidMount() {
+  //   this.showCats();
+  // }
 
   handleSearch(topic) {
     console.log(`${topic} was searched`);

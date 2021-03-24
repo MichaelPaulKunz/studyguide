@@ -51,9 +51,22 @@ const saveTopic = (topic) => {
 const getTopics = (cat) => {
   return Topic.find({category: cat});
 };
-const getAllTopics = (cat) => {
-  return Topic.find({});
+const getAllCategories = () => {
+ // console.log('hello from cats');
+  return Topic.find({})
+    .then(data => {
+      const cats = [];
+      data.forEach(topic => {
+        if (!cats.includes(topic.category)) {
+          cats.push(topic.category);
+        }
+      });
+      console.log('hello from get all categories');
+      console.log(cats);
+      return cats;
+    });
 };
 
 module.exports.saveTopic = saveTopic;
 module.exports.getTopics = getTopics;
+module.exports.getAllCategories = getAllCategories;
