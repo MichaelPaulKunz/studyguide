@@ -8,8 +8,8 @@ const getInfo = function(subject) {
     search: subject,
   })
     .then(data => {
-      console.log('hello from get info');
-      console.log(data.data);
+      //console.log('hello from get info');
+      //console.log(data.data);
       const organized = data.data.reduce((string, item)=>{
         let cleanedUp = '';
         let include = true;
