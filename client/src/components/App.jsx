@@ -1,13 +1,47 @@
 // TODO
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 import NewTopic from './NewTopic.jsx';
 import TopicList from './TopicList.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      topics: [],
+    };
+    this.handleSearch = this.handleSearch.bind(this);
+    this.addCat = this.addCat.bind(this);
+    this.showCats = this.showCats.bind(this);
+  }
+
+  showCats() {
+    axios.get('/api/wiki')
+      .then((response)=> {
+        console.log('hello from showCats');
+        console.log(response.data);
+      });
+  }
+
+  componentDidMount() {
+    this.showCats();
+  }
+
+  handleSearch(topic) {
+    console.log(`${topic} was searched`);
+  }
+
+  addCat() {
+  }
+
   render() {
+    const { topics } = this.state;
     return (
       <div>
-        <h1>The Ultimate Study Guide!</h1>
+        <NewTopic onSearch={this.handleSearch}/>
+        <TopicList topics={topics} />
       </div>
     );
   }

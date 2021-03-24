@@ -51,6 +51,9 @@ const saveTopic = (topic) => {
 const getTopics = (cat) => {
   return Topic.find({category: cat});
 };
+const getAllTopics = (cat) => {
+  return Topic.find({});
+};
 
 module.exports.saveTopic = saveTopic;
 module.exports.getTopics = getTopics;

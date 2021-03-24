@@ -4,6 +4,8 @@
   "description": "### Overview:",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
     "eslint": "^7.22.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
@@ -15,6 +17,7 @@
     "lodash-loader": "^2.1.4",
     "mongoose": "^5.12.2",
     "node-fetch": "^2.6.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "webpack-dev-server": "^3.11.2"
@@ -27,13 +30,15 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^5.3.1",
+    "nock": "^13.0.11",
     "webpack": "^5.27.2",
     "webpack-cli": "^4.5.0"
   },
   "scripts": {
     "dev": "webpack",
     "start": "nodemon server",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:client-dev": "webpack --config webpack.config.js --mode development --watch"
   },
   "repository": {
     "type": "git",
