@@ -17,18 +17,18 @@ class App extends React.Component {
     //this.showCats = this.showCats.bind(this);
   }
 
-  // showCats() {
-  //   axios.get('/api/wiki')
-  //     .then((response)=> {
-  //       console.log('hello from showCats');
-  //       console.log(response.data);
-  //       this.setState({topics: [5, 4, 3, 2]});
-  //     });
-  // }
+  showCats() {
+    axios.get('/api/wiki')
+      .then((response)=> {
+        console.log('hello from showCats');
+        console.log(response.data);
+        this.setState({topics: response.data});
+      });
+  }
 
-  // componentDidMount() {
-  //   this.showCats();
-  // }
+  componentDidMount() {
+    this.showCats();
+  }
 
   handleSearch(topic) {
     console.log(`${topic} was searched`);
