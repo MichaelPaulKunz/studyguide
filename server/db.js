@@ -52,7 +52,7 @@ const getTopics = (cat) => {
   return Topic.find({category: cat});
 };
 const getAllCategories = () => {
- // console.log('hello from cats');
+  // console.log('hello from cats');
   return Topic.find({})
     .then(data => {
       const cats = [];
@@ -61,12 +61,24 @@ const getAllCategories = () => {
           cats.push(topic.category);
         }
       });
-      console.log('hello from get all categories');
-      console.log(cats);
       return cats;
     });
 };
+const getAllTopics = () => {
+  return Topic.find({});
+};
+
+const deleteAllTopics = () => {
+  return Topic.deleteMany({}, ((err, results) => {
+    if (err) {
+      console.log(err);
+    }
+  }));
+};
+
 
 module.exports.saveTopic = saveTopic;
 module.exports.getTopics = getTopics;
+module.exports.getAllTopics = getAllTopics;
 module.exports.getAllCategories = getAllCategories;
+module.exports.deleteAllTopics = deleteAllTopics;

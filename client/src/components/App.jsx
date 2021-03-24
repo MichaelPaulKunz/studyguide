@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import NewTopic from './NewTopic.jsx';
 import TopicList from './TopicList.jsx';
+import Summaries from './Summaries.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -20,8 +21,8 @@ class App extends React.Component {
   showCats() {
     axios.get('/api/wiki')
       .then((response)=> {
-        console.log('hello from showCats');
-        console.log(response.data);
+        //console.log('hello from showCats');
+        //console.log(response.data);
         this.setState({topics: response.data});
       });
   }
@@ -32,6 +33,10 @@ class App extends React.Component {
 
   handleSearch(topic) {
     console.log(`${topic} was searched`);
+    axios.post('/api/wiki', {
+      search: topic,
+    })
+      .then(this.showCats());
   }
 
   addCat() {
@@ -43,6 +48,7 @@ class App extends React.Component {
       <div>
         <NewTopic onSearch={this.handleSearch}/>
         <TopicList topics={topics} />
+        <Summaries/>
       </div>
     );
   }
