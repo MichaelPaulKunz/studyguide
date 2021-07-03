@@ -1,7 +1,10 @@
 //TODO
+
 const path = require('path');
 const { app } = require('./app');
+
 const PORT = 8080;
+
 app.listen(PORT, (() => {
-    console.log(`Server listening on :${PORT}`);
+  console.log(`Server listening on :${PORT}`);
 }));

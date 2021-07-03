@@ -1,5 +1,31 @@
+$bgcolor : rgb(150, 0, 0);
+$txtcolor : white;
+
 body {
+  position: relative;
+  left: 33%;
   text-align: center;
-  background-color: black;
-  color:white;
+  justify-content: center;
+  background-color: $bgcolor;
+  color: $txtcolor;
+  width: 33vw;
+  overflow: scroll;
+}
+
+button {
+  cursor: pointer;
+}
+
+#header {
+  text-align: center;
+  color: $bgcolor;
+  background-color: $txtcolor;
+  border-radius: 8px;
+  width: 33vw;
+}
+
+#topic {
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }

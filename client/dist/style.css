@@ -1,6 +1,33 @@
 body {
+  position: relative;
+  left: 33%;
   text-align: center;
-  background-color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #960000;
   color: white;
+  width: 33vw;
+  overflow: scroll;
+}
+
+button {
+  cursor: pointer;
+}
+
+#header {
+  text-align: center;
+  color: #960000;
+  background-color: white;
+  border-radius: 8px;
+  width: 33vw;
+}
+
+#topic {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,8 +6,8 @@ const TopicList = props => {
 
   return (
     <div>
-      <h2>Crammed Topics</h2>
-      <ul>{props.topics.map((topic, index) => <TopicItem topic={topic} key={index}/>)}</ul>
+      <h1 id="header">Crammed Topics</h1>
+      <div>{props.topics.map((topic, index) => <TopicItem topic={topic} key={index}/>)}</div>
     </div>
   );
 };

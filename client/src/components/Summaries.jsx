@@ -10,7 +10,7 @@ const Summaries = props => {
   };
 
   return (
-    <li><button onClick={() => kill()}>Delete</button></li>
+    <div><button onClick={() => kill()}>Delete All</button></div>
   );
 };
 

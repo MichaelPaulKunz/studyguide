@@ -30,7 +30,7 @@ class NewTopic extends React.Component {
     const { topic } = this.state;
     return (
       <div>
-        <h1>What do you need to cram?</h1>
+        <h1 id="header">What do you need to cram?</h1>
         <input value={topic} onChange={this.handleChange}/>
         <button onClick={this.handleClick}>Explore</button>
       </div>
